@@ -1,0 +1,49 @@
+// C program to store student name and marks .
+#include <stdio.h>
+
+struct Displaydata{
+  
+    int i;
+    int j;
+    char name[5][10];
+    
+};
+
+int main(){
+   
+   struct Displaydata d;
+   d.i; 
+   d.j;
+ 
+   
+   char name[5][10];
+   
+    d.name[5][10]; 
+    int x,f=0;
+    
+    printf("Enter names of five students:\n");
+    for(x=0 ;x<5 ;x++ )
+        scanf("%s",&d.name[x][0]);
+   
+   /* 2D array declaration*/
+   int StudentMarks[2][3];
+  
+  
+   for(d.i=0; d.i<2; d.i++) {
+      for(d.j=0;d.j<3;d.j++) {
+         printf("Enter marks obtained in Physics[%d][%d]:", d.i, d.j);
+         scanf("%d", &StudentMarks[d.i][d.j]);
+      }
+   }
+  
+   printf("Student Marks in Physics:\n");
+   for(d.i=0; d.i<2; d.i++) {
+      for(d.j=0;d.j<3;d.j++) {
+         printf("%d ", StudentMarks[d.i][d.j]);
+         if(d.j==2){
+            printf("\n");
+         }
+      }
+   }
+   return 0;
+}
