@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Threading;
+
+namespace AirPortDisplayBoard
+{
+    class MyProgram
+    {
+
+      
+        static void Main(string[] args)
+        {
+            var names = new LinkedList<string>();
+            names.AddLast("Indigo Airlines: Mumbai - New Delhi - 6 A M");
+            names.AddLast("Jet Airways: Mumbai- Pune - 7 A M");
+            names.AddLast("Air India: Mumbai - Bangalore - 7:30 A M");
+            names.AddLast("Air  Asia: Mumbai - Ahemedabad - 8 A M");
+            names.AddLast("Lufthansa: Mumbai - Berlin - 8 A M");
+            foreach (var name in names)
+            {
+                Thread.Sleep(10000);
+                Console.WriteLine(name);
+            }
+           
+            Console.ReadLine();
+        }
+    }
+}
