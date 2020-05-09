@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Threading;
+
+namespace enumexample1
+{
+    class Program
+    {
+        enum OutPatient
+        {
+
+            Amey=0, Gourang, Mandar, Asavari, Mugdha, Vibhavari, Shubhra, Anirudha, Ketaki, Swapnil
+            
+
+        }
+        static void Main(string[] args)
+        {
+
+            Console.Write("XYZ Hospital Out-Patient Dashboard\n");
+            foreach (string str in Enum.GetNames(typeof(OutPatient)))
+                {
+                Console.WriteLine(str);
+                Thread.Sleep(20000);
+            }
+            
+
+        }
+    }
+}
