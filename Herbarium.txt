@@ -1,0 +1,125 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace UseofStruct
+{
+    public struct Herbarium
+    {
+        public string a1;
+
+        public struct subfamily
+        {
+            public string a;  //Poaceae;
+            public string b;  //Chenpodiaceae;
+            public string c;  //Rosaceae;
+        }
+
+        public struct subspecies
+        {
+            public string c1; //Zea_Mays_local_name_corn;
+            public string d; //Oryza_sativa_local_name_rice;
+            public string e; // Avena_sativa_local_name_oat;
+            public string f; //Chenpodium_Album_local_name_Amaranthus;
+            public string g; //Prunus_duluis_local_name_Almond;
+            public string h; //Prunus_persica_local_name_Peach;
+            public string i; //Prunus_armeniaca_local_name_Apricot;
+        }
+
+        public struct subtype
+        {
+            public string j; //Zea_mays_Angiosperm;
+            public string k; //Oryza_sativa_Angiosperm;
+            public string l; //Avena_sativa_Angiosperm;
+            public string m; //Triticum_durum_Angiosperm;
+            public string h; //Chenpodium_Album_Angiosperm;
+            public string o; //Prunus_persica_Angiosperm;
+            public string p; //Prunus_duluis_Angiosperm;
+            public string q; //Prunus_armeniaca_Angiosperm;
+        }
+
+        public struct sublifespan {
+            public string r; //Zea_mays_Annual;
+            public string s; //Oryza_sativa_Annual;
+            public string t; //Avena_sativa_Annual;
+            public string u; //Triticum_durum_Annual;
+            public string v; //Chenpodium_album_Annual;
+            public string w; //Prunus_persica_Perennial;
+            public string x; //Prunus_duluis_Perennial;
+            public string y; //Prunus_armeniaca_Perennial;
+        }
+                  
+    }
+
+    public struct BotanySubDepartment
+    {
+        public Herbarium hs4;
+
+        public string x1; // Sub_Department_Ecology
+        public string y1; // Sub_Department_Plant_Pathology
+        public string z1; // Sub_Department_Microbiology;
+    }
+    class BotanyDepartment
+    {
+        static void Main(string[] args)
+        {
+
+            BotanySubDepartment bsub;
+            bsub.hs4.a1 = "XYZ University, Botany Department Welcomes you\n";
+         
+           
+            Console.Write(bsub.hs4.a1);
+            Console.Write("The Sub Departments are:\n");
+            bsub.x1 = "Sub_Department_Ecology";
+            bsub.y1 = "Sub_Department_Plant_Pathology";
+            bsub.z1 = "Sub_Department_Microbiology";
+            Console.WriteLine(bsub.x1 + " \n" + bsub.y1+ " \n" + bsub.z1+ "\n");
+            Console.Write("The flora stored in Herbarium are as follows.......\n");
+
+            Herbarium.subfamily hs = new Herbarium.subfamily();
+            hs.a = "Poaceae";
+            hs.b = "Chenpodiaceae";
+            hs.c = "Rosaceae";
+            Console.Write("The families are:\n");
+            Console.WriteLine(hs.a+" \n"+hs.b+" \n"+hs.c+ "\n");
+
+            Herbarium.subspecies hs1 = new Herbarium.subspecies();
+            hs1.c1 = "Zea_Mays_local_name_Corn;";
+            hs1.d = "Oryza_sativa_local_name_Rice";
+            hs1.e = "Avena_sativa_local_name_Oat";
+            hs1.f= "Chenpodium_Album_local_name_Amaranthus";
+            hs1.g = "Prunus_duluis_local_name_Almond";
+            hs1.h = "Prunus_persica_local_name_Peach";
+            hs1.i = "Prunus_armeniaca_local_name_Apricot";
+            Console.Write("The species are:\n");
+            Console.WriteLine(hs1.c1 + " \n" + hs1.d + " \n" + hs1.e + "\n"+ hs1.f+"\n"+ hs1.g+ "\n"+ hs1.h+"\n"+hs1.i+"\n");
+
+            Herbarium.subtype hs2 = new Herbarium.subtype();
+            hs2.j = "Zea_mays_Angiosperm";
+            hs2.k = "Oryza_sativa_Angiosperm";
+            hs2.l = "Avena_sativa_Angiosperm";
+            hs2.m = "Chenpodium_Album_local_Angiosperm";
+            hs2.o = "Prunus_persica_Angiosperm";
+            hs2.p = "Prunus_duluis_Angiosperm";
+            hs2.q = "Prunus_armeniaca_Angiosperm";
+            Console.Write("All the species belongs to Angiosperm Category:\n");
+            Console.WriteLine(hs2.j + " \n" + hs2.k + " \n" + hs2.l + "\n" + hs2.m + "\n" + hs2.o + "\n" + hs2.p + "\n" + hs2.q+"\n");
+
+            Herbarium.sublifespan hs3 = new Herbarium.sublifespan();
+            hs3.r = "Zea_mays_Annual";
+            hs3.s = "Oryza_sativa_Annual";
+            hs3.t = "Avena_sativa_Annual";
+            hs3.u = "Triticum_durum_Annual";
+            hs3.v = "Chenpodium_album_Annual";
+            hs3.w = "Prunus_persica_Perennial";
+            hs3.x = "Prunus_duluis_Perennial";
+            hs3.y = "Prunus_armeniaca_Perennial";
+            Console.Write("The life-span of species are::\n");
+            Console.WriteLine(hs3.r + " \n" + hs3.s + " \n" + hs3.t + "\n" + hs3.u + "\n" + hs3.v+ "\n" + hs3.w + "\n" + hs3.x+"\n"+ hs3.y +"\n");
+
+            Console.ReadKey();
+        }
+    }
+}
